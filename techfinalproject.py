@@ -1,4 +1,6 @@
+#in order to use random chance
 import random
+#this is to be able to select random options so that each time you play the experience is individualized.
 randomuclteam=random.choice(["Real Madrid","FC Barcelona","PSG","Bayern Munich","Juventus"])
 agentname=random.choice(["Mark","Logan","Robert"])
 plteam1=random.choice(["Liverpool", "Everton", "Manchester United"])
@@ -9,10 +11,15 @@ eflteam2=random.choice(["Swansea City","Leeds United","Sheffield United","Wigan 
 scout1=random.choice(["Jackson","Briggs","Jose","Antonio","Larry"])
 scout2=random.choice(["Patrick","Valentine","Harry","Arthur"])
 trainername=random.choice(["Alex","Blake","Cody","Steven","Forty"])
+#starts the game, provides instructions and an introductory paragraph.
 print("In order to play this game, please type the number next to whichever option you wish to choose (ex. if option 1 is 1.get breakfast, type 1 to select it.")
 print("Welcome to Premier Career Football. You are an aspiring young soccer player who hopes to make it to the ultimate platform one day, the Premier League, and win the League title. In order to get there, you will have to make tough decisions and difficult sacrifices that put your entire career on the line. Every choice you make has a direct impact on how your story will end. Will you make it to the big lights, with 50,000 people chanting your name? Or will you be left behind the beautiful game, stranded like the millions before you?")
+#in order to create a player name, we ask for an input value in which they tell the game their name.
 name=input(print("First, what is your name?"))
+#the name is now incorporated into the rest of the story.
+#the random chance for different elements also appear in the story using the formatted string, and allow for individualized experience.
 print(f"Your name is {name}. You wake up at 6 AM, ready to start a new day of training. You stretch briefly and turn over to see a text on your phone. It’s from {trainername}, your trainer. “Hey {name}, remember, today trial scouts are coming to the academy to observe the practice! Be at your best-” You groan. You feel terrible this morning, and trials are the make or break into the next level of competitive football. Today could be the most important day of your life, and you feel absolutely depleted.")
+#this is a junction, or decision spot. the player picks an option and the story unfolds depending on whichever option the player selected. this is shown through an if, elif and else option, in which each option is coded to have a different outcome (and account for values that are not acceptable.)
 option1=input(print("1.STAY IN BED 2.GET DRESSED"))
 if option1=="1":
   print(f"You decide to sleep it off a couple of minutes…BZZZ! You turn over. You dozed off and now are half an hour late for practice!!! You hurry into the car and speed off towards the training grounds.")
@@ -30,6 +37,7 @@ elif option2=="2":
   print(f"You collapse on the side of the pitch, exhausted from having run for nearly 2 hours. You feel a hand on your shoulder and a deep voice behind you say: “Good stuff lad, you showed some serious potential in the kick-around.” You turn around to see {trainername} standing next to a man holding a clipboard. A scout! “My name is {scout1}. I scout for the team {eflteam1}. We have been scouting you for a while, {name}. Do you have a few minutes to talk about your future?”")
 else:
   print("Please select an option.")
+#this is an example of a situation in which a choice depends on the previous choice. selecting a specific pathway through the game leads you to each individual point.
 option3=input(print("1.I WOULD LOVE TO 2.SORRY, I DON'T THINK SO"))
 if option3=="1":
   print(f"“At the {eflteam1} academy, we take training very seriously. If you come to play for us, you will need to put in 100% and more to survive. It is hard - I will not lie to you. But I can make your dreams of playing in the Premier League a reality. What do you say?”")
@@ -95,6 +103,7 @@ elif option8=="2":
 else:
   print("Please select an option.")
 print(f"It has been three weeks since your famous last-minute winner in the semi-final. The team ended up losing in the final, but it didn’t matter - you had already achieved overnight fame through that clinical finisher. You are ready to go to training when suddenly your phone rings. It’s your agent, {agentname}. “Hey, {name}. Make sure you’re sitting right now, because your gonna faint when I tell you this. {plteam1}, {plteam2}, and {plteam3} have expressed an interest in you. Who do you want to hear from?”")
+#here, the random choice is being used in the user selection.
 option10=input(print(f"1.{plteam1} 2.{plteam2} 3.{plteam3}"))
 if option10=="1":
   print(f"You show up at the legendary {plteam1} training grounds. You meet the first team and subs, talk quickly with the manager about a contract, and get situated. Everything becomes a surreal blur of excitement and awe. You know this is where you belong.")
@@ -134,6 +143,7 @@ elif option15=="2":
 else:
   print("Please select an option.")
 print("As you get open, the ball is played back to you. You are in the final third of the pitch, and you have men open in the box.")
+#another example of an option pathway that depends on previous choices.
 option16=input(print("1.CROSS 2.CUT INSIDE"))
 if option16=="1":
   print("You put in a cross to the far post. One of your attacking midfielders gets up, and heads the ball back. It falls to the center midfielder, who settles the ball, shoots - and scores!!!")
@@ -148,7 +158,7 @@ elif option16=="2":
     print("Please select an option.")
 else:
   print("Please select an option.")
-print("It all comes down to PKs. This will determine whether or not your team will make it into the next round of the Champions League, and will put you permanently in the soccer limelight. The score is 4-4, with {randomclteam} just missing their last penalty. It’s all up to you.")
+print("It all comes down to PKs. This will determine whether or not your team will make it into the next round of the Champions League, and will put you permanently in the soccer limelight. The score is 4-4, with {randomuclteam} just missing their last penalty. It’s all up to you.")
 option18=input(print("1.CHEEKY PANENKA CHIP SHOT 2.BLAST IT STRAIGHT DOWN THE MIDDLE 3.AIM FOR THE CORNERS"))
 if option18=="1":
   print("You step up, run forward and shoot - and it fakes out the goalkeeper! The shot floats easily into the goal as the keeper dives before the trick shot.")
